@@ -1,0 +1,279 @@
+.pay-post-form {
+    list-style: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.pay-post-form label {
+    float: left;
+    font-weight: bold;
+    height: 20px;
+    margin: 0;
+    min-width: 130px;
+    padding: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.pay-post-form label[for="new-post-desc"] {
+    margin: 0 0 5px 0;
+}
+
+.pay-post-form input, 
+.pay-post-form textarea, 
+.pay-post-form select {
+    margin: 0;
+    border: 1px solid #ccc;
+}
+
+.pay-post-form textarea, 
+.pay-post-form select {
+    padding: 5px;
+}
+
+.pay-post-form input:focus,
+.pay-post-form textarea:focus, 
+.pay-post-form select:focus {
+    background: #F2F2F2;
+}
+
+.pay-post-form .childCategory {
+    padding-top: 5px;
+}
+
+.pay-post-form input[type=text]{
+    width: 50%;
+}
+
+.pay-post-form textarea{
+    width: 70%;
+}
+
+.pay-post-form input[type=submit], 
+.pay-submit,
+.pay-gateway input[type="submit"],
+.pay-order-summary input[type="submit"] {
+    cursor: pointer; 
+} 
+
+.clear {
+    clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.error {
+    margin: 0 10px 10px 10px;
+    padding: 3px 10px;
+    color: #D8000C;
+    background-color: #FFBABA;
+    border: solid 1px #dd3c10;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #FFFFFF;
+    font-size: 13px;
+}
+
+span.required {
+    color: red;
+}
+
+#pass-strength-result {
+    border-radius: 6px 6px 6px 6px;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    margin: 12px 5px 5px 1px;
+    padding: 7px;
+    text-align: center;
+    width: 248px;
+}
+
+#pass-strength-result.good {
+    background-color: #FFEC8B;
+    border-color: #FFCC00 !important;
+}
+
+#pass-strength-result {
+    background-color: #EEEEEE;
+    border-color: #DDDDDD !important;
+}
+
+#pass-strength-result.bad {
+    background-color: #FFB78C;
+    border-color: #FF853C !important;
+}
+
+#pass-strength-result.strong {
+    background-color: #C3FF88;
+    border-color: #8DFF1C !important;
+}
+
+#pass-strength-result.short {
+    background-color: #FFA0A0;
+    border-color: #F04040 !important;
+}
+
+.pay-post-form .category-wrap {
+    position: relative;
+}
+
+.pay-post-form .category-wrap select {
+    display: block;
+    margin: 0 0 5px 0;
+}
+
+.pay-form-field {
+    margin: 16px 0 0 0;
+}
+
+/* hides break tags that get injected when themes replace wpautop with their own format functions */
+.pay-form-field br {
+    display: none;
+}
+
+/* ensure buttons in editor toolbar are the correct width */
+.pay-post-form .quicktags-toolbar input {
+    width: auto;
+}
+
+/* editor text area should not get background images applied */
+.pay-post-form textarea {
+    background-image: none;
+}
+
+.pay-post-form p {
+    clear: left;
+}
+
+/* ensure the media uploader button text is readable */
+#pay-post-area .wp-core-ui a.button {
+    color: #333!important; 
+    background: #f3f3f3;
+}
+
+/* ensure the media button aligns correctly */
+#pay-post-area form div.wp-media-buttons,
+#pay-post-area form div.wp-editor-tools {
+    margin-bottom: 0;
+}
+
+/* transaction and order summary pages */
+.pay-gateway fieldset {
+    border: 0px none transparent;
+}
+
+.pay-gateway input[type="submit"],
+.pay-order-summary input[type="submit"] {
+    cursor: pointer;
+}
+
+/* hides post_meta from transaction page */
+.pay-gateway .post_meta,
+.pay-order-summary .post_meta {
+    display: none;
+}
+
+/* set the form labels to display above the fields */
+.form-field input[type="text"] {
+    display:block;
+    clear:left;
+}
+
+/* set a maximum width for cc fields */
+input.card-cvc { 
+    max-width: 52px;
+}
+
+input.card-expiry-month {
+    max-width: 36px;
+}
+
+input.card-expiry-year {
+    max-width: 52px;
+}
+
+.pay-gateway .form-field label {
+    float: none;
+    width: auto;
+}
+
+.pay-order-summary input {
+    margin: 0 0 30px 0;
+}
+
+.pay-order-summary table {
+    min-width: 180px;
+}
+
+.pay-group:before,
+.pay-group:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.pay-group:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.pay-group {
+    *zoom: 1;
+}
+
+@media screen and (max-width: 480px) {
+
+    .pay-post-form input[type=text] {
+        width: 80%;
+    }
+
+    .pay-post-form input,
+    .pay-post-form select {
+        display: block;
+    }
+
+    .pay-post-form label {
+        float: none;
+        display: block;
+        margin: 0 0 5px 0;
+    }
+
+    .pay-post-form label[for="new-post-cat"] {
+        float: left;
+    }
+
+    .category-wrap {
+        clear: left;
+    }
+
+    table.mceLayout, textarea.tinyMCE {
+        width: 100%;
+    }
+    
+    /* make the visual toolbar wrap */
+    .mceToolbar td {
+        display:table-row;
+        float: left;
+    }
+    
+    .mceToolbar td:nth-of-type(14){
+        clear: left;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .mceToolbar td:nth-of-type(11){
+        clear: left;
+    }
+    .mceToolbar td:nth-of-type(14){
+        clear: none;
+    }
+
+}
